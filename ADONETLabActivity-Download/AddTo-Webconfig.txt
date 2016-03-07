@@ -1,0 +1,4 @@
+<add name="HKeInvestConnectionString" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HKeInvestDB.mdf;Integrated Security=True"
+      providerName="System.Data.SqlClient" />
+<add name="ExternalDatabasesConnectionString" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ExternalDatabases.mdf;Integrated Security=True"
+      providerName="System.Data.SqlClient" />

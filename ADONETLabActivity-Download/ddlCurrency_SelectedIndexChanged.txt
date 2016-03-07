@@ -1,0 +1,32 @@
+// Get the index value of the convertedValue column in the GridView using the helper method "getColumnIndexByName".
+int convertedValueIndex = myHKeInvestCode.getColumnIndexByName(gvSecurityHolding, "convertedValue");
+
+// Get the currency to convert to from the ddlCurrency dropdownlist.
+// Hide the converted currency column if no currency is selected.
+string toCurrency = ddlCurrency.SelectedValue;
+if (toCurrency == "0")
+{
+    gvSecurityHolding.Columns[convertedValueIndex].Visible = false;
+    return;
+}
+
+// Make the convertedValue column visible and create a DataTable from the GridView.
+// Since a GridView cannot be updated directly, it is first loaded into a DataTable using the helper method 'unloadGridView'.
+gvSecurityHolding.Columns[convertedValueIndex].Visible = true;
+DataTable dtSecurityHolding = myHKeInvestCode.unloadGridView(gvSecurityHolding);
+
+// ***********************************************************************************************************
+// TODO: For each row in the DataTable, get the base currency of the security, convert the current value to  *
+//       the selected currency and assign the converted value to the convertedValue column in the DataTable. *
+// ***********************************************************************************************************
+foreach (DataRow row in dtSecurityHolding.Rows)
+{
+    // Add your code here!
+}
+
+// Change the header text of the convertedValue column to indicate the currency. 
+gvSecurityHolding.Columns[convertedValueIndex].HeaderText = "Value in " + toCurrency;
+
+// Bind the DataTable to the GridView.
+gvSecurityHolding.DataSource = dtSecurityHolding;
+gvSecurityHolding.DataBind();

@@ -1,0 +1,9 @@
+if (!IsPostBack)
+{
+    // Get the available currencies to populate the DropDownList.
+    DataTable dtCurrency = myExternalFunctions.getCurrencyData();
+    foreach (DataRow row in dtCurrency.Rows)
+    {
+        ddlCurrency.Items.Add(row["currency"].ToString().Trim());
+    }
+}

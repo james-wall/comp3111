@@ -1,0 +1,14 @@
+// Since a GridView cannot be sorted directly, it is first loaded into a DataTable using the helper method 'unloadGridView'.
+// Create a DataTable from the GridView.
+DataTable dtSecurityHolding = myHKeInvestCode.unloadGridView(gvSecurityHolding);
+
+// Set the sort expression in ViewState for correct toggling of sort direction,
+// Sort the DataTable and bind it to the GridView.
+string sortExpression = e.SortExpression.ToLower();
+ViewState["SortExpression"] = sortExpression;
+dtSecurityHolding.DefaultView.Sort = sortExpression + " " + myHKeInvestCode.getSortDirection(ViewState, e.SortExpression);
+dtSecurityHolding.AcceptChanges();
+
+// Bind the DataTable to the GridView.
+gvSecurityHolding.DataSource = dtSecurityHolding.DefaultView;
+gvSecurityHolding.DataBind();
