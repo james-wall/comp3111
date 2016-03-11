@@ -54,59 +54,74 @@
                 <div>
                     <asp:Label ID="Label8" runat="server" Text="First name:"></asp:Label>
                     <asp:TextBox ID="TextBox6" runat="server" MaxLength="35"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox6" CssClass="text-danger" EnableClientScript="False" ErrorMessage="First name is required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label9" runat="server" Text="Last name:"></asp:Label>
                     <asp:TextBox ID="TextBox7" runat="server" MaxLength="35"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox7" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Last name is required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label10" runat="server" Text="Date of birth (dd/mm/yyyy):"></asp:Label>
                     <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox8" CssClass="text-danger" EnableClientScript="False" ErrorMessage="DOB is required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label11" runat="server" Text="Email Address: "></asp:Label>
                     <asp:TextBox ID="TextBox9" runat="server" MaxLength="30"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox9" CssClass="text-danger" EnableClientScript="False" ErrorMessage="HKID/Passport required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label12" runat="server" Text="Home Address (Cannot be a PO box):"></asp:Label>
                     <asp:Label ID="Label56" runat="server" Text="Building (if any): "></asp:Label>
                     <asp:TextBox ID="TextBox10" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Building required"></asp:RequiredFieldValidator>
                     <asp:Label ID="Label57" runat="server" Text="Street: "></asp:Label>
                     <asp:TextBox ID="TextBox42" runat="server" MaxLength="35"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox42" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Street required"></asp:RequiredFieldValidator>
                     <asp:Label ID="Label58" runat="server" Text="District: "></asp:Label>
                     <asp:TextBox ID="TextBox43" runat="server" MaxLength="19"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox43" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Distric Required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label13" runat="server" Text="Home phone: "></asp:Label>
                     <asp:TextBox ID="TextBox11" runat="server" MaxLength="8"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox11" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Phone # required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label14" runat="server" Text="Home fax: "></asp:Label>
                     <asp:TextBox ID="TextBox12" runat="server" MaxLength="8"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox12" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Fax required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label15" runat="server" Text="Business phone: "></asp:Label>
                     <asp:TextBox ID="TextBox13" runat="server" MaxLength="8"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox13" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Biz phone required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label16" runat="server" Text="Mobile phone: "></asp:Label>
                     <asp:TextBox ID="TextBox14" runat="server" MaxLength="8"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox14" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Mobile # required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label17" runat="server" Text="Country of citizenship: "></asp:Label>
                     <asp:TextBox ID="TextBox15" runat="server" MaxLength="70"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox15" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Country of citizenship required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label18" runat="server" Text="Country of legal residence: "></asp:Label>
                     <asp:TextBox ID="TextBox16" runat="server" MaxLength="70"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox16" CssClass="text-danger" EnableClientScript="False" ErrorMessage="COuntry of residence required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label19" runat="server" Text="HKID/passport number: "></asp:Label>
                     <asp:TextBox ID="TextBox17" runat="server" MaxLength="8"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox17" CssClass="text-danger" EnableClientScript="False" ErrorMessage="HKID/passport # required"></asp:RequiredFieldValidator>
                 </div>
                 <div>
                     <asp:Label ID="Label20" runat="server" Text="Passport country of issue: "></asp:Label>
                     <asp:TextBox ID="TextBox18" runat="server" MaxLength="70"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox18" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Passport country of issue required"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <div class="border col-xs-6">
@@ -401,8 +416,10 @@
             <div class="border col-xs-6">
                 <asp:Label ID="Label52" runat="server" Text="Account Holder’s Signature"></asp:Label>
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox2" CssClass="text-danger" EnableClientScript="False" ErrorMessage="Please sign the document"></asp:RequiredFieldValidator>
                 <asp:Label ID="Label53" runat="server" Text="Date: "></asp:Label>
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="TextBox3" CssClass="text-danger" EnableClientScript="False" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
             </div>
             <div class="border col-xs-6">
                 <asp:Label ID="Label54" runat="server" Text="Co-Account Holder’s Signature, if applicable"></asp:Label>
