@@ -1,4 +1,6 @@
 ##COMP 3111 Semester Project, Part 1
+### The Hong Kong University of Technology
+####Spring, 2016
 
 Semester-long project completed at the Hong Kong University of Technology, Spring 2016, under Professor Fred Lochovsky
 in COMP 3111, Software Engineering.
